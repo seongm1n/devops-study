@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # 빌드된 애플리케이션 복사
-COPY build/libs/devops-study-0.0.1-SNAPSHOT.jar app.jar
+COPY build/libs/app.jar app.jar
 
 # 애플리케이션 실행 명령어
 CMD ["java", "-jar", "app.jar"]
