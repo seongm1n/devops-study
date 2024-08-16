@@ -9,19 +9,6 @@ pipeline {
     }
 
     stages {
-        stage('Initialize') {
-            steps {
-                // Git 저장소 상태 확인
-                sh '''
-                    pwd
-                    ls -la
-                    git init
-                    git remote add origin https://github.com/seongm1n/devops-study.git
-                    git fetch
-                '''
-            }
-        }
-        
         stage('Checkout') {
             steps {
                 checkout scm
