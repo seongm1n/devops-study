@@ -6,6 +6,8 @@ pipeline {
         DOCKER_USERNAME = 'seongm1n'
         APP_NAME = 'escape-room'
         TAG = "${BUILD_NUMBER}"
+        DEPLOY_USER = 'ubuntu'
+        DEPLOY_SERVER = 'ec2-3-34-35-246.ap-northeast-2.compute.amazonaws.com'
     }
 
     stages {
