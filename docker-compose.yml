@@ -1,7 +1,6 @@
-version: '3.8'
 services:
   app:
-    image: ${DOCKER_USERNAME}/${APP_NAME}:${TAG}
+    image: seongm1n/escape-room:latest
     container_name: spring-app
     restart: always
     ports:
