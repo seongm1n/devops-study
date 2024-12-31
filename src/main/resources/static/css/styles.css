@@ -1,0 +1,88 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 기본 레이아웃 */
+#sidebar-container {
+    height: 100vh;
+    background-color: #0a3711;
+}
+
+/* 로고 관련 */
+.sidebar-logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar-logo img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 메뉴 및 아이콘 관련 */
+.menu-icon {
+    margin-right: 10px;
+}
+
+#sidebar .nav-link {
+    border-radius: 0;
+    color: #333;
+}
+
+#sidebar .nav-link.active {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+#sidebar .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+/* 버튼 관련 */
+.btn-primary {
+    background-color: #0a3711 !important;
+    border-color: #0a3711 !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #08290f !important;
+    border-color: #08290f !important;
+}
+
+#content {
+    padding: 20px;
+}
+
+.page {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.table-header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 테이블 관련 */
+.table-container {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    margin-bottom: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+@media (max-width: 767px) { /* Bootstrap의 md breakpoint 이전 (일반적으로 767px 이하) */
+    #sidebar-container {
+        height: 100%;
+    }
+}

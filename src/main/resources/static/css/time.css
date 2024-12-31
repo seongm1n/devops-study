@@ -1,0 +1,12 @@
+.table-container table th:nth-child(1),
+.table-container table td:nth-child(1),
+.table-container table th:nth-child(2),
+.table-container table td:nth-child(2),
+.table-container table th:nth-child(3),
+.table-container table td:nth-child(3) {
+    width: 20%;
+}
+
+.table-container table td:nth-child(3) {
+    text-align: center;
+}
