@@ -6,7 +6,7 @@ pipeline {
         DOCKER_USERNAME = 'seongm1n'
         APP_NAME = 'test-escape-room'
         TAG = "${BUILD_NUMBER}"
-        EC2_HOST = 'ec2-3-34-35-246.ap-northeast-2.compute.amazonaws.com'
+        EC2_HOST = 'ubuntu@ec2-3-34-35-246.ap-northeast-2.compute.amazonaws.com'
         REMOTE_DIR = '/app'
     }
 
