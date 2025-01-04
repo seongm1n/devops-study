@@ -48,6 +48,23 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy') {
+            steps {
+                sshagent(['deploy-server-ssh']) {
+                    sh "scp -o StrictHostKeyChecking=no docker-compose.yml ${DEPLOY_USER}@${DEPLOY_SERVER}:~/"
+
+                    sh """
+                        ssh -o StrictHostKeyChecking=no ${DEPLOY_USER}@${DEPLOY_SERVER} '
+                            docker-compose down || true
+                            docker rmi ${DOCKER_USERNAME}/${APP_NAME}:latest || true
+                            docker pull ${DOCKER_USERNAME}/${APP_NAME}:latest
+                            docker-compose up -d
+                        '
+                    """
+                }
+            }
+        }
     }
 
     post {
