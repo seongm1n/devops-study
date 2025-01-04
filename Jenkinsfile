@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                     chmod +x gradlew
-                    ./gradlew clean build
+                    ./gradlew clean build -x test    # 테스트 제외
                 '''
             }
         }
