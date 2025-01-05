@@ -15,3 +15,5 @@
   - [x] 예약 수정
   - [x] 예약 삭제
   - [x] 기존에 사용하던 List 및 AtomicLong 을 제거한다.
+
+build test
